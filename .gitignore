@@ -92,7 +92,7 @@ ENV/
 .DS_Store
 
 # Bower components
-spyder_terminal/server/static/components/*
+win_tornado_terminals/static/components/*
 
 # Log files
 .log
