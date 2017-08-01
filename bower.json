@@ -1,10 +1,10 @@
 {
-  "name": "spyder-terminal",
+  "name": "win-tornado-terminals",
   "homepage": "https://github.com/spyder-ide/spyder-terminal",
   "authors": [
-    "Spyder Project Contributors <admin@spyder-ide.org>"
+    "Jupyter Development Team <jupyter@googlegroups.com>"
   ],
-  "description": "Spyder Qt System Console",
+  "description": "Windows terminal backend for Jupyter Notebook",
   "main": "",
   "license": "MIT",
   "private": true,
@@ -12,7 +12,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "spyder_terminal/server/static/components",
+    "win-tornado-terminals/static/components",
     "test",
     "tests"
   ],
