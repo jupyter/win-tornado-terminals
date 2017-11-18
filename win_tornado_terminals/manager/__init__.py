@@ -18,6 +18,6 @@ MIT, see LICENSE for more details.
 """
 import os
 import sys
-import logic.term_manager
+from .term_manager import TermManager
 
 __version__ = '1.0.0'

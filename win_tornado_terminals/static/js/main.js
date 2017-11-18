@@ -157,7 +157,7 @@ function isAlive() {
 }
 
 function runRealTerminal() {
-  term.attach(socket);
+  term.terminadoAttach(socket);
   term._initialized = true;
 
   lineEnd = term.browser.isMSWindows ? '\r\n' : '\n';
@@ -176,13 +176,4 @@ function runRealTerminal() {
 
 $(document).ready(function() {
     createTerminal();
-    new QWebChannel(qt.webChannelTransport, function (channel) {
-        window.handler = channel.objects.handler;
-        window.addEventListener('promptReady', function(e) {
-           window.handler.ready();
-        }, false);
-        window.addEventListener('terminalClose', function(e) {
-           window.handler.close();
-        }, false);
-    });
 });

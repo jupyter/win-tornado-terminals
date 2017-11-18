@@ -38,12 +38,13 @@ WEB = [
 ROUTES = REST + WS + WEB
 
 
-def gen_routes(close_future):
+def gen_routes(close_future, logger):
     """Return a list of HTML redirection routes."""
     if close_future is not None:
         ws = []
         for route in WS:
             ws.append((route[0], route[1],
-                       dict(close_future=close_future)))
+                       dict(close_future=close_future,
+                            logger=logger)))
         return REST + ws + WEB
     return ROUTES

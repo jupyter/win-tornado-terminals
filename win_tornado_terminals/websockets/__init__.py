@@ -15,6 +15,6 @@ Copyright (c) 2016, Edgar A. Margffoy.
 MIT, see LICENSE for more details.
 """
 
-import websockets.term_ws
+from .term_ws import MainSocket
 
 __version__ = '1.0.0'

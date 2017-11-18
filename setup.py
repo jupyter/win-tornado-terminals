@@ -38,17 +38,17 @@ def get_version(module='win_tornado_terminals'):
 
 def get_description():
     """Get long description."""
-    with open(os.path.join(HERE, 'README.rst'), 'r') as f:
+    with open(os.path.join(HERE, 'README.md'), 'r') as f:
         data = f.read()
     return data
 
 
-REQUIREMENTS = ['spyder>=3.2.0', 'pexpect', 'tornado',
-                'coloredlogs', 'requests']
+REQUIREMENTS = ['tornado', 'coloredlogs', 'requests']
 
 if os.name == 'nt' or any([arg.startswith('win') for arg in sys.argv]):
     REQUIREMENTS.append('pywinpty>=0.1.3')
-
+else:
+    REQUIREMENTS.append('ptyprocess>=0.5.2')
 
 cmdclass = {
     'build_static': BuildStatic,
