@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # Copyright (c) Jupyter Development Team
 #
-# Licensed under the terms of the MIT License
+# Licensed under the terms of the BSD License
 # (see LICENSE.txt for details)
 # -----------------------------------------------------------------------------
 """Setup script for win_tornado_terminals."""
@@ -43,8 +43,7 @@ def get_description():
     return data
 
 
-REQUIREMENTS = ['spyder>=3.2.0', 'pexpect', 'tornado',
-                'coloredlogs', 'requests']
+REQUIREMENTS = ['pexpect', 'tornado', 'coloredlogs', 'requests']
 
 if os.name == 'nt' or any([arg.startswith('win') for arg in sys.argv]):
     REQUIREMENTS.append('pywinpty>=0.1.3')
@@ -63,7 +62,7 @@ setup(
     cmdclass=cmdclass,
     keywords=['Jupyter', 'Terminal', 'Windows'],
     url='https://github.com/jupyter/win-tornado-terminals',
-    license='MIT',
+    license='BSD',
     author='Jupyter Development Team',
     author_email='jupyter@googlegroups.com',
     description='Windows terminal backend for Jupyter Notebook',
@@ -75,7 +74,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: MacOS',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX :: Linux',
